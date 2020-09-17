@@ -10,7 +10,7 @@ import java.util.List;
  * Date: 2020/09/17
  * Time: 23:24
  */
-public class numberConvert {
+public class NumberConvert {
     public List <String> convert(Integer[] nember) {
         List <String> list = new ArrayList <String>();
         //
@@ -82,7 +82,7 @@ public class numberConvert {
 
 
     public static void main(String[] args) {
-        numberConvert lcd = new numberConvert();
+        NumberConvert lcd = new NumberConvert();
         //测试有0或者1情况 ，测试0在前面 1在后面情况
 //        Integer[] character={0,2,1,3};
         //测试输入非数字情况(前端校验，这边例题为数组，如果传入字符串 需要校验非数字情况)
@@ -99,6 +99,7 @@ public class numberConvert {
 //        Integer[] character={12,0};
 //        Integer[] character={11,1};
 //        Integer[] character={01,1};
+
         Integer[] character={101,1};
         List <String> list = lcd.convert(character);
         Iterator <String> itx = list.iterator();
