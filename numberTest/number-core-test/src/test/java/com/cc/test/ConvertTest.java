@@ -118,7 +118,7 @@ public class ConvertTest {
 
     /**
      * 测试类
-     * @author DK.Lin
+     * @author cc
      * @since 2020/09/17
      */
     @Test
@@ -147,5 +147,33 @@ public class ConvertTest {
             System.out.print(" ");
         }
         System.out.println("");
+    }
+
+
+    /**
+     * 测试是否支持大于9小于100的数字转换
+     */
+    @Test
+    public void test10(){
+        Integer[] character={23,24,99};
+        List<String> list = numberConvert.convert(character);
+        Iterator<String> itx = list.iterator();
+        while (itx.hasNext()) {
+            String str = itx.next();
+            System.out.println(str);
+        }
+    }
+    /**
+     * 测试多个数字转换
+     */
+    @Test
+    public void test11(){
+        Integer[] character={0,24,99,10,11,23,01,00,0001,00010};
+        List<String> list = numberConvert.convert(character);
+        Iterator<String> itx = list.iterator();
+        while (itx.hasNext()) {
+            String str = itx.next();
+            System.out.println(str);
+        }
     }
 }
